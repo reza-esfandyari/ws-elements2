@@ -19,9 +19,9 @@ dependencies:
     - mv AppSpec.yml dist 
 
 ## Customize test commands
-test:
-  override:
-    - npm run test
+## test:
+##   override:
+##     - npm run test
 
     
 general:
