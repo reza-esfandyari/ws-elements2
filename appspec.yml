@@ -1,8 +1,8 @@
 version: 0.0
 os: linux
-files:
-  - source: /
-    destination: /home/ubuntu/deployment/ws-elements
 hooks:
-  BeforeInstall:
-    - location: /home/ubuntu/deployment/deploy.sh
+ApplicationStop:
+    - location: assets/deploymentScripts/PrepareEnvironment.sh
+  ApplicationStart:
+    - location: assets/deploymentScripts/StartServices.sh
+      timeout: 3600
