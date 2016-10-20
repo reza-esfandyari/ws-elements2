@@ -1,0 +1,45 @@
+## Customize the test machine
+machine:
+   # Set the timezone
+  timezone:
+    America/Edmonton
+
+  # Version of Node to use
+  node:
+    version:
+      6.5.0
+
+## Customize dependencies
+dependencies:
+  pre:
+  #"Start Installation"
+    - npm install
+  override:
+    - npm run build:prod
+    - mv AppSpec.yml dist 
+
+## Customize test commands
+test:
+  override:
+    - npm run test
+
+    
+general:
+  artifacts:
+    - "dist" # relative to the build directory
+    
+    
+deployment:
+  staging:
+    branch: master
+    codedeploy:
+      ws-deployment:
+        application_root: /dist
+        revision_location:
+          revision_type: S3
+          s3_location:
+            bucket: ws-my-bucket
+            key_pattern: apps/ws-deployment-{BRANCH}-{SHORT_COMMIT}-{BUILD_NUM}.zip
+        region: us-west-2
+        deployment_group: ws-deployment-group
+        deployment_config: CodeDeployDefault.OneAtATime

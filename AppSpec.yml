@@ -1,0 +1,8 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/ubuntu/deployment/ws-elements
+hooks:
+  BeforeInstall:
+    - location: /home/ubuntu/deployment/deploy.sh
