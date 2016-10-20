@@ -18,11 +18,6 @@ dependencies:
     - npm run build:prod
     - mv AppSpec.yml dist 
 
-## Customize test commands
-## test:
-##   override:
-##     - npm run test
-
     
 general:
   artifacts:
