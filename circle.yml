@@ -16,7 +16,7 @@ dependencies:
     - npm install
   override:
     - npm run build:prod
-    - mv AppSpec.yml dist 
+    - mv appspec.yml dist 
 
     
 general:
