@@ -1,0 +1,10 @@
+{
+  "name": "el-test",
+  "description": "A test component to show how to create and publish a standard element for Worksignal platform",
+  "version": "1.0.4",
+  "author": "Worksignal team",
+  "repository": { 
+    "type": "git",
+    "url": "https://github.com/metacoding/ws-elements"
+  }
+}

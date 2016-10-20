@@ -1,0 +1,18 @@
+body {
+  font-family: 'Tangerine', serif;
+  font-size: 48px;
+}
+.code {
+  background: greenyellow;
+  color: black;
+  padding: 2px 5px 2px 5px;
+  border-radius: 5px;
+}
+.bold {
+  color: darkred;
+  padding: 2px 5px 2px 5px;
+  border-radius: 5px;
+}
+.home {
+  margin: 20px;
+}

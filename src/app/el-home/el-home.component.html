@@ -1,0 +1,46 @@
+<div class="home">
+  <h1 id="mainTitle">Steps to add a new element to this project</h1>
+
+<h2>1- Generate a component using Angular CLI</h2>
+<ul>
+<li>First make sure your current directory is <span class="bold">src/app</span></li>
+<li>Use <span class="code">ng g c el-ANYNAME</span> command to create your component which will be a Worksignal element</li>
+<li>Please add an index.ts file with the following contents <span class="code">export * from './el-ANYNAME.component';</span></li>
+</ul>
+<h2>2- Generate test page for your component using Angular CLI</h2>
+<ul>
+  <li>Go to <span class="bold">src/app/el-ANYNAME</span> folder and create another component as your test page<br>you should name it <span class="bold">el-ANYNAME-page</span></li>
+  <li>Please DONT remove the <span class="bold">app-</span> prefix of your component selectors. It is necessary to have a green result for <span class="code">ng lint</span> command</li>
+  <li>Go to <span class="bold">src/app/el-ANYNAME-page</span> folder and open the html file<br>As a starting point, just put two lines in it<br>
+    <ul>
+      <li>a title like what you see in el-test example<br></li>
+      <li>and your component HTML tag: <span class="bold">&lt;app-el-ANYNAME&gt;</span></li>
+      <li>Now after a <span class="bold">&lt;hr&gt;</span> tag, you can add any other control bound to your properties</li>
+    </ul>
+  </li>
+</ul>
+
+<h2>3- Add your test page to routing and menu</h2>
+<ul>
+  <li>open the file <span class="bold">app-routing.module.ts</span> and:</li>
+  <ul>
+    <li>Import your test page as we did for ElTestPageComponent</li>
+    <li>add your test page to the routes array</li> you need to choose a path (route) like test
+    <br>For example the test page we built for el-test can be shown by requesting http://localhost:4200/test
+  </ul>
+  <li>open the file <span class="bold">app-component.html</span> and add a new menu item using the route you just added earlier</li>
+  <li>Now you should see your component name as a link in top of the main page. test the page by clicking on the link</li>
+</ul>
+
+<h2>4- publish your component to npm website</h2>
+<ul>
+  <li>Please add a README.md file to the root folder of your element</li>
+  <li>Add a package.json similar to the one we added for el-test example component. you need to change the repository URL to yours.</li>
+  <li>In command prompt go to the root folder of your element</li>
+  <li>Use npm adduser command to login to your npm account</li>
+  <li>Make sure your have a correct version increment in your package.json</li>
+  <li>If you want to exclude some files, please use .npmignore file</li>
+  <li>Use npm publish to publish all files into npm website</li>
+  <li>Update all .md documents</li>
+</ul>
+</div>
