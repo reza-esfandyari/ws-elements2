@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 hooks:
   ApplicationStart:
-    - location: /home/ubuntu/deployment/deploy.sh
     - location: assets/deploymentScripts/PrepareEnvironment.sh
     - location: assets/deploymentScripts/StartServices.sh
       timeout: 3600
+      runas: root
