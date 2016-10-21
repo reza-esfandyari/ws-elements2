@@ -1,8 +1,7 @@
 version: 0.0
 os: linux
 hooks:
-ApplicationStop:
+  ApplicationStart:
     - location: assets/deploymentScripts/PrepareEnvironment.sh
-ApplicationStart:
     - location: assets/deploymentScripts/StartServices.sh
       timeout: 3600
