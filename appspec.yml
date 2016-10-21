@@ -3,6 +3,5 @@ os: linux
 hooks:
   ApplicationStart:
     - location: assets/deploymentScripts/PrepareEnvironment.sh
-    - location: assets/deploymentScripts/StartServices.sh
       timeout: 3600
       runas: root
