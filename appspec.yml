@@ -1,8 +1,17 @@
 version: 0.0
 os: linux
+files:
+  - source: /
+    destination: /home/ubuntu/www/app
 hooks:
+  BeforeInstall:
+    - location: assets/deploymentScripts/CleanUp.sh
+      timeout: 3600
+      runas: ubuntu
   ApplicationStart:
     - location: assets/deploymentScripts/PrepareEnvironment.sh
+      timeout: 3600
+      runas: ubuntu
     - location: assets/deploymentScripts/StartServices.sh
       timeout: 3600
       runas: ubuntu
